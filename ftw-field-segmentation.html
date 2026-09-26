@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A field instance segmentation case study in Spain: evaluating Mask R-CNN performance across agricultural field morphologies." />
+    <title>Field Instance Segmentation in Spain — Şehriban Yiğit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <script src="dist/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html#top" aria-label="Şehriban Yiğit, home"><span>Şehriban Yiğit</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#about">About</a>
+        <a class="nav-contact" href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <article>
+        <header class="case-hero">
+          <a class="case-back" href="index.html#work">← All projects</a>
+          <p class="eyebrow">Selected work / GeoAI / Spain · 2026</p>
+          <h1>Field Instance Segmentation in Spain</h1>
+          <p class="case-deck">How does agricultural field morphology relate to the performance of an instance-segmentation model?</p>
+          <div class="case-hero-footer">
+            <p>Fields of the World · Sentinel-2 RGB+NIR · Mask R-CNN</p>
+            <a class="project-link" href="https://github.com/sehribanyigit/ftw-field-segmentation" target="_blank" rel="noreferrer">Explore the repository <span aria-hidden="true">↗</span></a>
+          </div>
+        </header>
+
+        <section class="case-feature" aria-labelledby="case-finding-title">
+          <div class="case-feature-copy">
+            <p class="eyebrow">The finding</p>
+            <h2 id="case-finding-title">Field size mattered in this test set.</h2>
+            <p>Tiles with larger median fields tended to have higher segmentation overlap. Mean IoU increased from <strong>0.317</strong> in the smallest-field quartile to <strong>0.573</strong> in the largest.</p>
+            <p class="case-note">The relationship is an observed association within the Spain test set, not evidence that field size alone caused the difference.</p>
+          </div>
+          <figure class="case-chart">
+            <div class="case-chart-heading"><span>Field-size quartile</span><span>Mean IoU</span></div>
+            <div class="case-chart-bars" role="img" aria-label="Mean IoU by field-size quartile: Q1 0.317, Q2 0.446, Q3 0.544, Q4 0.573.">
+              <div><span>Q1</span><span class="case-track"><span style="--value:55.3%"></span></span><strong>0.317</strong></div>
+              <div><span>Q2</span><span class="case-track"><span style="--value:77.8%"></span></span><strong>0.446</strong></div>
+              <div><span>Q3</span><span class="case-track"><span style="--value:94.9%"></span></span><strong>0.544</strong></div>
+              <div><span>Q4</span><span class="case-track"><span style="--value:100%"></span></span><strong>0.573</strong></div>
+            </div>
+            <figcaption>197 morphology-valid held-out tiles · median field area vs IoU: Spearman ρ = +0.478</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-visual" aria-labelledby="case-visual-title">
+          <div class="case-visual-heading">
+            <div><p class="eyebrow">From imagery to prediction</p><h2 id="case-visual-title">A closer look at small and large fields.</h2></div>
+            <p>Satellite imagery, reference masks and model predictions shown side by side for selected Spain tiles.</p>
+          </div>
+          <figure>
+            <a href="dist/assets/images/ftw-small-large-field-comparison.png" target="_blank" rel="noreferrer" aria-label="Open the field segmentation comparison at full size">
+              <img src="dist/assets/images/ftw-small-large-field-comparison.png" alt="Six Spain examples comparing satellite imagery, ground-truth masks and model predictions. Predictions for the selected small-field examples are mostly empty, while the large-field examples show closer overlap with reference masks." loading="lazy" />
+            </a>
+            <figcaption>Selected examples from the project’s failure analysis. These illustrate model behaviour and do not replace the held-out metrics. <a href="dist/assets/images/ftw-small-large-field-comparison.png" target="_blank" rel="noreferrer">View full-size figure ↗</a></figcaption>
+          </figure>
+        </section>
+
+        <section class="case-section" aria-labelledby="case-approach-title">
+          <div class="case-section-label"><p class="eyebrow">01 / Approach</p><h2 id="case-approach-title">A focused baseline, then a closer look.</h2></div>
+          <div class="case-section-body">
+            <p>I used the Spain subset of <em>Fields of the World</em> and four-band Sentinel-2 imagery (RGB and near infrared). A Mask R-CNN model with a ResNet-50 FPN backbone was trained as a three-epoch, compute-conscious baseline.</p>
+            <p>Performance was measured on <strong>216 held-out tiles</strong>. For the morphology analysis, <strong>197 valid tiles</strong> were used to compare median field area with tile-level IoU and field-size quartiles.</p>
+            <p class="case-method">Spain subset <span aria-hidden="true">→</span> Instance masks <span aria-hidden="true">→</span> Mask R-CNN <span aria-hidden="true">→</span> Held-out evaluation <span aria-hidden="true">→</span> Morphology analysis</p>
+          </div>
+        </section>
+
+        <section class="case-results" aria-labelledby="case-results-title">
+          <div class="case-results-inner">
+            <p class="eyebrow">02 / Evaluation</p>
+            <h2 id="case-results-title">Held-out test results</h2>
+            <p>Reported across 216 independent test tiles.</p>
+            <dl class="case-metrics">
+              <div><dt>Mean IoU</dt><dd>0.4938</dd></div>
+              <div><dt>Median IoU</dt><dd>0.5122</dd></div>
+              <div><dt>Precision</dt><dd>0.8321</dd></div>
+              <div><dt>Recall</dt><dd>0.5115</dd></div>
+              <div><dt>F1 / Dice</dt><dd>0.6551</dd></div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="case-section case-interpretation" aria-labelledby="case-interpretation-title">
+          <div class="case-section-label"><p class="eyebrow">03 / Interpretation</p><h2 id="case-interpretation-title">What the numbers can—and cannot—say.</h2></div>
+          <div class="case-section-body">
+            <p>The model found some fields reliably, yet recall was lower than precision. The quartile comparison suggests that smaller-field landscapes were more difficult for this baseline to segment in the held-out sample.</p>
+            <p>This is a single-country, three-epoch baseline. The field-size pattern does not establish causation or performance in other countries. More training and broader evaluation would be needed before making either claim.</p>
+            <a class="project-link" href="https://github.com/sehribanyigit/ftw-field-segmentation" target="_blank" rel="noreferrer">See code and full analysis <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
+      </article>
+      <nav class="case-end" aria-label="Project navigation"><span>Next: explore another spatial question</span><a href="index.html#work">Back to selected work <span aria-hidden="true">↗</span></a></nav>
+    </main>
+    <footer class="site-footer"><span>© 2026 Şehriban Yiğit</span><a href="#main">Back to top ↑</a></footer>
+  </body>
+</html>

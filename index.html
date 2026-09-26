@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Şehriban Yiğit — Geomatics Engineer working across geospatial data, Earth observation and GeoAI."
+    />
+    <title>Şehriban Yiğit — Geospatial Data & GeoAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <script src="dist/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Şehriban Yiğit, home">
+        <span>Şehriban Yiğit</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#research">Research</a>
+        <a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-coordinate" aria-hidden="true">
+          <span>38.9637° N</span>
+          <span>35.2433° E</span>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Geomatics Engineer · Geospatial Data & GeoAI</p>
+          <h1 id="hero-title">Making sense of places through spatial data.</h1>
+          <p class="hero-intro">
+            I work across spatial analysis, Earth observation and GeoAI—building reproducible workflows and clear, map-led products.
+          </p>
+          <a class="text-link" href="#work">View selected work <span aria-hidden="true">↘</span></a>
+        </div>
+
+        <div class="hero-index" aria-label="Portfolio themes">
+          <span>01 · Spatial analysis</span>
+          <span>02 · Earth observation</span>
+          <span>03 · GeoAI</span>
+        </div>
+      </section>
+
+      <section class="selected-work" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Projects built around clear spatial questions.</h2>
+        </div>
+
+        <article class="project-card project-card--featured">
+          <figure class="project-media project-media--featured ftw-chart">
+            <div class="ftw-chart__header">
+              <span>Field-size quartile</span>
+              <span>Mean IoU</span>
+            </div>
+
+            <div class="ftw-chart__bars" role="img" aria-label="Mean IoU increases from 0.317 in the smallest-field quartile to 0.573 in the largest-field quartile.">
+              <div class="ftw-bar">
+                <span class="ftw-bar__label">Q1</span>
+                <span class="ftw-bar__track"><span class="ftw-bar__fill" style="--value: 55.3%"></span></span>
+                <strong>0.317</strong>
+              </div>
+              <div class="ftw-bar">
+                <span class="ftw-bar__label">Q2</span>
+                <span class="ftw-bar__track"><span class="ftw-bar__fill" style="--value: 77.8%"></span></span>
+                <strong>0.446</strong>
+              </div>
+              <div class="ftw-bar">
+                <span class="ftw-bar__label">Q3</span>
+                <span class="ftw-bar__track"><span class="ftw-bar__fill" style="--value: 94.9%"></span></span>
+                <strong>0.544</strong>
+              </div>
+              <div class="ftw-bar">
+                <span class="ftw-bar__label">Q4</span>
+                <span class="ftw-bar__track"><span class="ftw-bar__fill" style="--value: 100%"></span></span>
+                <strong>0.573</strong>
+              </div>
+            </div>
+
+            <figcaption class="ftw-chart__finding">
+              <span>Median field area vs IoU · Spearman</span>
+              <strong>ρ = +0.478</strong>
+            </figcaption>
+          </figure>
+
+          <div class="project-copy">
+            <p class="project-meta">Spain · GeoAI · 2026</p>
+            <h3>Field Instance Segmentation in Spain</h3>
+            <p class="project-question">How does agricultural field morphology relate to instance-segmentation performance?</p>
+            <p class="project-summary">
+              A compute-conscious Mask R-CNN baseline evaluated across 216 held-out Sentinel-2 tiles, with analysis focused on field morphology, model behaviour and failure patterns.
+            </p>
+
+            <dl class="metrics">
+              <div><dt>Mean IoU</dt><dd>0.4938</dd></div>
+              <div><dt>Precision</dt><dd>0.8321</dd></div>
+              <div><dt>Recall</dt><dd>0.5115</dd></div>
+              <div><dt>F1 / Dice</dt><dd>0.6551</dd></div>
+            </dl>
+
+            <p class="project-stack">Sentinel-2 RGB+NIR · PyTorch · Mask R-CNN · ResNet-50 FPN</p>
+            <div class="card-links">
+              <a class="project-link" href="ftw-field-segmentation.html">Read the case study <span aria-hidden="true">↗</span></a>
+              <a class="project-link project-link--secondary" href="https://github.com/sehribanyigit/ftw-field-segmentation" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <div class="secondary-projects">
+          <article class="secondary-card">
+            <figure class="project-media project-media--secondary project-media--adelaide">
+              <img
+                src="dist/assets/images/adelaide-lst-map.png"
+                alt="Land surface temperature map of Adelaide Park Lands and surrounding areas."
+              />
+            </figure>
+
+            <div class="secondary-copy">
+              <p class="project-meta">Adelaide · Australia · 2026</p>
+              <h3>Park Lands Cooling</h3>
+              <p class="secondary-question">
+                Does land surface temperature change consistently with distance from the Park Lands?
+              </p>
+              <p class="secondary-summary">
+                Landsat analysis across 5,867 grid cells found cooler interiors, but no defensible uniform cooling-reach threshold.
+              </p>
+              <div class="card-links">
+                <a class="project-link" href="adelaide-parklands-cooling.html">Read the case study <span aria-hidden="true">↗</span></a>
+                <a class="project-link project-link--secondary" href="https://github.com/sehribanyigit/adelaide-parklands-cooling" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="secondary-card">
+            <figure class="project-media project-media--secondary project-media--melbourne">
+              <img
+                src="dist/assets/images/melbourne-web-map.png"
+                alt="Interactive map showing essential-services accessibility across Greater Melbourne."
+              />
+            </figure>
+
+            <div class="secondary-copy">
+              <p class="project-meta">Melbourne · Australia · 2026</p>
+              <h3>Essential Services Accessibility</h3>
+              <p class="secondary-question">
+                How evenly can residents access everyday services across Greater Melbourne?
+              </p>
+              <p class="secondary-summary">
+                A multi-source spatial workflow transformed grocery, healthcare, parks and transit data into an interactive SA2-level product.
+              </p>
+              <div class="card-links">
+                <a class="project-link" href="melbourne-essential-services-accessibility.html">Read the case study <span aria-hidden="true">↗</span></a>
+                <a
+                  class="project-link project-link--secondary"
+                  href="https://sehribanyigit.github.io/melbourne-essential-services-accessibility/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View live map <span aria-hidden="true">↗</span>
+                </a>
+                <a
+                  class="project-link project-link--secondary"
+                  href="https://github.com/sehribanyigit/melbourne-essential-services-accessibility"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="research" id="research" aria-labelledby="research-title">
+        <div class="research-heading">
+          <p class="eyebrow">Research</p>
+          <h2 id="research-title">Earlier research grounded in spatial analysis.</h2>
+        </div>
+
+        <article class="research-feature">
+          <figure class="research-map">
+            <img
+              src="dist/assets/images/antarctica-summer-solar-potential.png"
+              alt="Map showing 37-year mean summer shortwave solar radiation across 20 selected Antarctic research stations."
+            />
+            <figcaption>37-year mean summer shortwave solar radiation · MERRA-2 · QGIS</figcaption>
+          </figure>
+
+          <div class="research-copy">
+            <p class="project-meta">Antarctica · MSc Research · 2023</p>
+            <h3>Renewable Energy Potential in Antarctica</h3>
+            <p class="research-lead">
+              A spatial assessment of renewable-energy potential across Antarctic research stations using long-term climate and reanalysis data.
+            </p>
+            <p>
+              The study compared 20 research stations and included a preliminary analysis for the Turkish Research Base on Horseshoe Island. It brought together long-term MERRA-2 data, station-scale comparison and spatial reasoning to examine place-specific renewable-energy conditions.
+            </p>
+            <p>
+              Published as peer-reviewed research, the work forms an early link between my academic background and my current focus on applied geospatial analysis, Earth observation and GeoAI.
+            </p>
+
+            <dl class="research-facts" aria-label="Research details">
+              <div>
+                <dt>Scope</dt>
+                <dd>20 research stations</dd>
+              </div>
+              <div>
+                <dt>Data</dt>
+                <dd>Long-term MERRA-2</dd>
+              </div>
+              <div>
+                <dt>Output</dt>
+                <dd>Peer-reviewed publication</dd>
+              </div>
+            </dl>
+
+            <a
+              class="project-link research-link"
+              href="https://doi.org/10.28948/ngumuh.1208140"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Read peer-reviewed publication <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <section class="technical-foundations" id="foundations" aria-labelledby="foundations-title">
+        <div class="foundations-heading">
+          <p class="eyebrow">Technical foundations</p>
+          <h2 id="foundations-title">The workflows behind the maps.</h2>
+          <p>Smaller projects that show how I prepare, query and share spatial data.</p>
+        </div>
+
+        <div class="foundations-grid">
+          <article class="foundation-card">
+            <span class="foundation-number">01 / Data pipeline</span>
+            <h3>NOAA Storm Events Pipeline</h3>
+            <p>A command-line workflow that downloads storm records, converts them to spatial formats and checks the resulting data with DuckDB.</p>
+            <p class="foundation-stack">CLI · Bash · GDAL · Parquet · DuckDB</p>
+            <a class="foundation-link" href="https://github.com/sehribanyigit/noaa-storm-events-pipeline" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="foundation-card">
+            <span class="foundation-number">02 / Spatial SQL</span>
+            <h3>NYC Hydrant Analysis</h3>
+            <p>PostGIS analysis of hydrant density and 100 m coverage across New York City neighborhoods.</p>
+            <p class="foundation-stack">PostgreSQL · PostGIS · Spatial SQL</p>
+            <a class="foundation-link" href="https://github.com/sehribanyigit/nyc-hydrant-analysis" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="foundation-card">
+            <span class="foundation-number">03 / Web mapping</span>
+            <h3>NYC Hydrant Web Map</h3>
+            <p>An interactive neighborhood map that makes hydrant density easier to explore and compare.</p>
+            <p class="foundation-stack">MapLibre GL JS · Web GIS</p>
+            <div class="foundation-links">
+              <a class="foundation-link" href="https://sehribanyigit.github.io/nyc-hydrant-map/" target="_blank" rel="noreferrer">View live map <span aria-hidden="true">↗</span></a>
+              <a class="foundation-link foundation-link--muted" href="https://github.com/sehribanyigit/nyc-hydrant-map" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about-heading">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Curiosity starts with a place.</h2>
+        </div>
+
+        <div class="about-copy">
+          <p class="about-intro">
+            I’m Şehriban, a geomatics engineer exploring spatial analysis, Earth observation and GeoAI.
+          </p>
+          <p>
+            My path began in research, studying renewable energy potential in Antarctica. Since then, I’ve become increasingly interested in what spatial data can reveal beyond a location on a map: patterns, relationships and questions I might not have thought to ask before.
+          </p>
+          <p>
+            I build projects to follow that curiosity. Whether I’m analysing urban environments or evaluating a GeoAI model, I want to understand what the data shows, where its limits are and how to share the findings clearly.
+          </p>
+          <p class="about-closing">
+            Working with maps has changed how I see the world. I use spatial data to explore how places and people relate, question what a map can—and cannot—tell us, and follow the new questions that emerge.
+          </p>
+          <div class="about-links">
+            <a class="project-link" href="dist/assets/cv/Sehriban_Yigit_Geospatial_CV_EN.pdf" download="Sehriban_Yigit_CV.pdf" type="application/pdf">
+              Download CV <span aria-hidden="true">↓</span>
+            </a>
+            <a class="project-link" href="https://www.linkedin.com/in/%C5%9Fehriban-yi%C4%9Fit-708188104/" target="_blank" rel="noreferrer">
+              Connect on LinkedIn <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills" id="skills" aria-labelledby="skills-title">
+        <div class="skills-heading">
+          <p class="eyebrow">Skills & tools</p>
+          <h2 id="skills-title">From raw data to spatial insight.</h2>
+          <p>Methods and tools I use across analysis, Earth observation, GeoAI and web mapping.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group">
+            <span class="skill-number">01 / Analyse</span>
+            <h3>Spatial data</h3>
+            <p>Python · GeoPandas · SQL · PostGIS · DuckDB · GDAL · QGIS · Overture Maps cloud-hosted data</p>
+          </div>
+          <div class="skill-group">
+            <span class="skill-number">02 / Observe</span>
+            <h3>Earth observation</h3>
+            <p>Landsat · Sentinel-2 · Raster analysis · NDVI · Land surface temperature</p>
+          </div>
+          <div class="skill-group">
+            <span class="skill-number">03 / Model</span>
+            <h3>GeoAI</h3>
+            <p>PyTorch · Mask R-CNN · Instance segmentation · Model evaluation</p>
+            <p class="skill-training"><strong>Additional training</strong> · Machine learning · Deep learning · Data science</p>
+          </div>
+          <div class="skill-group">
+            <span class="skill-number">04 / Share</span>
+            <h3>Web mapping & workflows</h3>
+            <p>MapLibre GL JS · PMTiles · HTML/CSS · Bash · Docker · GitHub Pages</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-content">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let’s talk about places and possibilities.</h2>
+          <p>Interested in geospatial data, Earth observation or GeoAI? I’d be glad to connect and hear what you’re working on.</p>
+          <div class="contact-links">
+            <a href="mailto:sehribanygt65@gmail.com">Email · sehribanygt65@gmail.com <span aria-hidden="true">↗</span></a>
+            <a href="mailto:yigits19@itu.edu.tr">Academic · yigits19@itu.edu.tr <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/%C5%9Fehriban-yi%C4%9Fit-708188104/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/sehribanyigit" target="_blank" rel="noreferrer">Explore GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Şehriban Yiğit</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>

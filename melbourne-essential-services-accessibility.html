@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A spatial workflow and interactive map exploring access to everyday services across Greater Melbourne." />
+    <title>Melbourne Essential Services Accessibility — Şehriban Yiğit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <script src="dist/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html#top" aria-label="Şehriban Yiğit, home"><span>Şehriban Yiğit</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#about">About</a>
+        <a class="nav-contact" href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <article>
+        <header class="case-hero">
+          <a class="case-back" href="index.html#work">← All projects</a>
+          <p class="eyebrow">Selected work / Spatial analysis &amp; web mapping / Melbourne · 2026</p>
+          <h1>Melbourne Essential Services Accessibility</h1>
+          <p class="case-deck">How does access to everyday services vary across Greater Melbourne?</p>
+          <div class="case-hero-footer">
+            <p>Spatial analysis · SA2 · PMTiles · MapLibre GL JS</p>
+            <a class="project-link" href="https://sehribanyigit.github.io/melbourne-essential-services-accessibility/" target="_blank" rel="noreferrer">Explore the live map <span aria-hidden="true">↗</span></a>
+          </div>
+        </header>
+
+        <section class="melbourne-lead" aria-labelledby="melbourne-intro-title">
+          <div class="melbourne-lead-inner">
+            <p class="eyebrow">The question</p>
+            <h2 id="melbourne-intro-title">Everyday access has a geography.</h2>
+            <p>Grocery stores, healthcare, parks and transit each describe a different part of daily life. I brought these layers together to explore how access differs between Greater Melbourne's SA2 areas.</p>
+            <p class="melbourne-lead-note">The map is an exploratory comparison of areas. It does not measure an individual resident's travel time or guarantee access to a service.</p>
+          </div>
+        </section>
+
+        <section class="melbourne-map" aria-labelledby="melbourne-map-title">
+          <div class="case-visual-heading">
+            <div><p class="eyebrow">01 / Interactive product</p><h2 id="melbourne-map-title">Explore the map by area.</h2></div>
+            <p>The web map brings the spatial analysis into a format that can be explored beyond a static figure.</p>
+          </div>
+          <figure>
+            <a href="https://sehribanyigit.github.io/melbourne-essential-services-accessibility/" target="_blank" rel="noreferrer" aria-label="Open the interactive Melbourne accessibility map"><img src="dist/assets/images/melbourne-web-map.png" alt="Preview of the interactive essential-services accessibility map for Greater Melbourne." loading="lazy" /></a>
+            <figcaption>Map preview. <a href="https://sehribanyigit.github.io/melbourne-essential-services-accessibility/" target="_blank" rel="noreferrer">Open the interactive version ↗</a></figcaption>
+          </figure>
+        </section>
+
+        <section class="case-section" aria-labelledby="melbourne-approach-title">
+          <div class="case-section-label"><p class="eyebrow">02 / Approach</p><h2 id="melbourne-approach-title">From service locations to an area-level view.</h2></div>
+          <div class="case-section-body">
+            <p>I prepared spatial layers for four everyday service categories: groceries, healthcare, parks and transit. The analysis combines these sources at the SA2 level to make patterns across Greater Melbourne easier to compare.</p>
+            <p>I checked selected areas in QGIS, prepared map-ready data and published an interactive web map. The repository documents the workflow, data sources and scoring choices.</p>
+            <p class="case-method">Service layers <span aria-hidden="true">→</span> Spatial preparation <span aria-hidden="true">→</span> SA2 comparison <span aria-hidden="true">→</span> Interactive map</p>
+          </div>
+        </section>
+
+        <section class="melbourne-points" aria-labelledby="melbourne-output-title">
+          <div class="melbourne-points-inner">
+            <p class="eyebrow">03 / Project outcomes</p>
+            <h2 id="melbourne-output-title">An analysis you can navigate.</h2>
+            <div class="melbourne-point-grid">
+              <div><span>01</span><h3>Four service lenses</h3><p>Grocery, healthcare, parks and transit provide complementary views of everyday access.</p></div>
+              <div><span>02</span><h3>Comparable areas</h3><p>SA2 geography gives the map a consistent unit for examining variation across the city.</p></div>
+              <div><span>03</span><h3>Open web map</h3><p>The result is published as an interactive map so visitors can explore the spatial patterns directly.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section case-interpretation" aria-labelledby="melbourne-interpretation-title">
+          <div class="case-section-label"><p class="eyebrow">04 / Reading the map</p><h2 id="melbourne-interpretation-title">A starting point for better questions.</h2></div>
+          <div class="case-section-body">
+            <p>Area-level indicators can highlight differences worth investigating, but they simplify lived access. Boundaries, service quality, capacity and individual travel options are not fully represented by a composite view.</p>
+            <p>Use the map to explore and compare places, then consult the documented methods before drawing conclusions about a particular neighbourhood.</p>
+            <a class="project-link" href="https://github.com/sehribanyigit/melbourne-essential-services-accessibility" target="_blank" rel="noreferrer">See the methods and code on GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
+      </article>
+      <nav class="case-end" aria-label="Project navigation"><span>Explore another project</span><a href="index.html#work">Back to selected work <span aria-hidden="true">↗</span></a></nav>
+    </main>
+    <footer class="site-footer"><span>© 2026 Şehriban Yiğit</span><a href="#main">Back to top ↑</a></footer>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An observational Landsat analysis of land surface temperature around Adelaide Park Lands and its relationship with distance and vegetation." />
+    <title>Adelaide Park Lands Cooling — Şehriban Yiğit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <script src="dist/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html#top" aria-label="Şehriban Yiğit, home"><span>Şehriban Yiğit</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#about">About</a>
+        <a class="nav-contact" href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <article>
+        <header class="case-hero">
+          <a class="case-back" href="index.html#work">← All projects</a>
+          <p class="eyebrow">Selected work / Earth observation / Adelaide · 2026</p>
+          <h1>Adelaide Park Lands Cooling</h1>
+          <p class="case-deck">Does land surface temperature change consistently with distance from the Park Lands?</p>
+          <div class="case-hero-footer">
+            <p>Landsat · LST · NDVI · 100 m grid</p>
+            <a class="project-link" href="https://github.com/sehribanyigit/adelaide-parklands-cooling" target="_blank" rel="noreferrer">Explore the repository <span aria-hidden="true">↗</span></a>
+          </div>
+        </header>
+
+        <section class="adelaide-lead" aria-labelledby="adelaide-finding-title">
+          <div class="adelaide-lead-inner">
+            <p class="eyebrow">The finding</p>
+            <h2 id="adelaide-finding-title">There was no single cooling distance.</h2>
+            <p>Park interiors appeared cooler in the primary scene, but temperatures outside the boundary varied across locations and distance bands. The observations did not support a uniform cooling-reach threshold.</p>
+            <p class="adelaide-lead-note">The result describes a spatial pattern in land surface temperature, not a measured effect on air temperature or human thermal comfort.</p>
+          </div>
+        </section>
+
+        <section class="adelaide-map" aria-labelledby="adelaide-map-title">
+          <div class="case-visual-heading">
+            <div><p class="eyebrow">01 / Study area</p><h2 id="adelaide-map-title">A thermal view of the Park Lands.</h2></div>
+            <p>The map shows the spatial variation in daytime land surface temperature used to frame the distance analysis.</p>
+          </div>
+          <figure>
+            <a href="dist/assets/images/adelaide-lst-map.png" target="_blank" rel="noreferrer" aria-label="Open the Adelaide land surface temperature map at full size"><img src="dist/assets/images/adelaide-lst-map.png" alt="Land surface temperature map of Adelaide Park Lands and surrounding urban areas." loading="lazy" /></a>
+            <figcaption>Primary Landsat 9 scene · 26 January 2026. Open the map to examine its legend and spatial detail.</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-section" aria-labelledby="adelaide-approach-title">
+          <div class="case-section-label"><p class="eyebrow">02 / Approach</p><h2 id="adelaide-approach-title">From satellite pixels to spatial comparisons.</h2></div>
+          <div class="case-section-body">
+            <p>I prepared a cloud-masked Landsat 9 scene from 26 January 2026, derived land surface temperature and NDVI, and aligned the rasters to the study area.</p>
+            <p>A <strong>100 m analysis grid</strong> provided <strong>5,867 valid cells</strong>. Signed distance from the Park Lands boundary distinguished interior and exterior locations; I compared temperature distributions across distance bands and sections of the surrounding city.</p>
+            <p>An independent Landsat 8 scene from 3 February 2026 provided a sensitivity check of the main pattern.</p>
+            <p class="case-method">Landsat scenes <span aria-hidden="true">→</span> LST and NDVI <span aria-hidden="true">→</span> 100 m grid <span aria-hidden="true">→</span> Boundary distance <span aria-hidden="true">→</span> Sensitivity check</p>
+          </div>
+        </section>
+
+        <section class="adelaide-points" aria-labelledby="adelaide-results-title">
+          <div class="adelaide-points-inner">
+            <p class="eyebrow">03 / What the analysis showed</p>
+            <h2 id="adelaide-results-title">The pattern was spatially uneven.</h2>
+            <div class="adelaide-point-grid">
+              <div><span>01</span><h3>Cooler interiors</h3><p>Park Lands cells were generally cooler in the primary daytime scene, although values varied within the park.</p></div>
+              <div><span>02</span><h3>No clean distance gradient</h3><p>Outside temperature did not increase steadily with distance in a way that justified one universal reach.</p></div>
+              <div><span>03</span><h3>Context matters</h3><p>Vegetation and the surrounding built landscape are part of the observed variation; distance alone did not explain it.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section case-interpretation" aria-labelledby="adelaide-interpretation-title">
+          <div class="case-section-label"><p class="eyebrow">04 / Interpretation</p><h2 id="adelaide-interpretation-title">What this study can—and cannot—claim.</h2></div>
+          <div class="case-section-body">
+            <p>This is an observational comparison of daytime surface temperatures from particular satellite scenes. Land surface temperature is different from air temperature and does not directly measure thermal comfort.</p>
+            <p>The analysis identifies heterogeneous associations around the Park Lands. It does not establish that the park caused lower temperatures at a specific distance, or that the same pattern holds on every day.</p>
+            <a class="project-link" href="https://github.com/sehribanyigit/adelaide-parklands-cooling" target="_blank" rel="noreferrer">See methods, figures and code <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
+      </article>
+      <nav class="case-end" aria-label="Project navigation"><span>Explore another project</span><a href="index.html#work">Back to selected work <span aria-hidden="true">↗</span></a></nav>
+    </main>
+    <footer class="site-footer"><span>© 2026 Şehriban Yiğit</span><a href="#main">Back to top ↑</a></footer>
+  </body>
+</html>
